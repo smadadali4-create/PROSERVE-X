@@ -1,0 +1,66 @@
+### ProServe X — API & Page Test Requests
+
+### Base URL
+@baseUrl = http://127.0.0.1:8080
+
+### ─────────────────────────────────────────────
+### PUBLIC PAGES
+### ─────────────────────────────────────────────
+
+### Homepage
+GET {{baseUrl}}/
+
+### Search Providers
+GET {{baseUrl}}/search/
+
+### Search with query
+GET {{baseUrl}}/search/?q=john&category=electrician&city=New+York
+
+### All Providers
+GET {{baseUrl}}/providers/
+
+### Providers by Category
+GET {{baseUrl}}/providers/category/electrician/
+
+### Provider Detail (replace :id with actual pk)
+GET {{baseUrl}}/providers/1/
+
+### ─────────────────────────────────────────────
+### AUTHENTICATION
+### ─────────────────────────────────────────────
+
+### Login Page
+GET {{baseUrl}}/accounts/login/
+
+### Register Page
+GET {{baseUrl}}/accounts/register/
+
+### ─────────────────────────────────────────────
+### PROTECTED PAGES (requires login/session)
+### ─────────────────────────────────────────────
+
+### Dashboard
+GET {{baseUrl}}/accounts/dashboard/
+
+### My Bookings
+GET {{baseUrl}}/bookings/
+
+### Edit Provider Profile
+GET {{baseUrl}}/providers/edit/
+
+### ─────────────────────────────────────────────
+### ADMIN
+### ─────────────────────────────────────────────
+
+### Admin Panel
+GET {{baseUrl}}/admin/
+
+### ─────────────────────────────────────────────
+### STATIC FILES
+### ─────────────────────────────────────────────
+
+### CSS
+GET {{baseUrl}}/static/css/style.css
+
+### JS
+GET {{baseUrl}}/static/js/main.js
